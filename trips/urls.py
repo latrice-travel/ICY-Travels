@@ -1,7 +1,8 @@
 from django.urls import path
-from trips.views import create_trip
+from trips.views import create_trip, trip_list
 
 
 urlpatterns = [
-    path('trips/', create_trip, name="create_trip"),
+    path('create/', create_trip, name="create_trip"),
+    path('trips/', trip_list, name="trip_list"),
 ]

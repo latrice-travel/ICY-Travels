@@ -23,4 +23,9 @@ def create_trip(request):
     return render(request, "trips/create.html", context)
 
 
-    
+def trip_list(request):
+    trips = Trip.objects.all()
+    context = {
+        'trips': trips
+    }
+    return render(request, 'trips/list.html', context)
