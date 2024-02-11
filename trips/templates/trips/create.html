@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} ICY Trips{% endblock %}
+
+{% block content %}
+    <h1>Create a New Trip</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Trip</button>
+    </form>
+{% endblock}
