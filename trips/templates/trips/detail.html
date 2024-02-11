@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+    <h1>{{ trip.title }}</h1>
+    <img src="{{ trip.picture }}" alt="Trip Picture">
+    <p>{{ trip.description }}</p>
+    <p>{{ trip.location }}</p>
+    <p>{{ trip.created_at }}</p>
+{% endblock %}

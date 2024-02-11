@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
-
-
-{% block title %} ICY Trip List {% endblock %}
-
+{% block title %}{% endblock %}
 {% block content %}
-    <h1> Trips</h1>
+    <h1>ICY Trips</h1>
     <ul>
         {% for trip in trips %}
-            <li>{{ trip.title }}</li>
-            <li>{{ trip.description }}</li>
-            <li>{{ trip.location }}</li>
+            <li>
+                <h2>
+                    <a href="{% url 'show_trip' trip.id %}">{{ trip.title }}</a>
+                </h2>
+                <img src="{{ trip.picture }}" alt="Trip Picture">
+                <p>{{ trip.description }}</p>
+                <p>{{ trip.location }}</p>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

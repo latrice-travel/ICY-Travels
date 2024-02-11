@@ -14,7 +14,5 @@ class Trip(models.Model):
     future_trip = models.BooleanField(default=False)
     past_trip = models.BooleanField(default=False)
 
-
-
     def __str__(self):
         return self.title
