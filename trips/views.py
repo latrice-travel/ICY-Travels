@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from trips.forms import TripForm
 from trips.models import Trip
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 # Create your views here.
 
@@ -19,7 +20,6 @@ def create_trip(request):
     context = {"form": form}
     return render(request, "trips/create.html", context)
 
-
 def show_trip(request, trip_id):
     trip = get_object_or_404(Trip, id=trip_id)
     context = {
@@ -27,12 +27,16 @@ def show_trip(request, trip_id):
     }
     return render(request, "trips/detail.html", context)
 
-
 def trip_list(request):
     trips = Trip.objects.all()
-    context = {"trips": trips}
+    login_url = reverse("login")
+    signup_url = reverse("signup")
+    context = {
+        "trips": trips,
+        "login_url": login_url,
+        "signup_url": signup_url,
+    }
     return render(request, "trips/list.html", context)
-
 
 @login_required
 def edit_trip(request, id):

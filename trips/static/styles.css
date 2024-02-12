@@ -1,43 +1,28 @@
-$black-alpha: rgba(0, 0, 0, 0.3);
-$black-alpha-2: rgba(0, 0, 0, 0.4);
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body {
-    background-color: black;
-    background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D'),
-                      linear-gradient(45deg, $black-alpha 24%, $black-alpha-2 25%, $black-alpha-2 26%, $black-alpha 26%, $black-alpha 74%, $black-alpha-2 75%, $black-alpha-2 76%, $black-alpha 76%),
-                      linear-gradient(-45deg, $black-alpha 24%, $black-alpha-2 25%, $black-alpha-2 26%, $black-alpha 26%, $black-alpha 74%, $black-alpha-2 75%, $black-alpha-2 76%, $black-alpha 76%);
-    background-size: cover;
-    background-position: center;
-    font-family: 'ShareTech', sans-serif;
-    font-size: 16px;
-    color: black;
-    margin: 20px;
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    background-image: url('https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dHJhdmVsfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    color: black; /* Set text color to black */
     padding: 20px;
+    word-wrap: break-word; /* Wrap text to prevent overflow */
+
 }
 
-.grid-item {
-    border: 1px solid red;
-    background-color: #E3E3E3;
-    color: white;
+header, footer {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 10px 20px; /* Add padding */
     text-align: center;
-    padding: 20px;
+    margin: 20px 0; /* Add margin top and bottom */
 }
 
-.grid-item img {
-    width: 100%; /* Ensure the image takes up the entire width of its container */
-    height: auto; /* Maintain the aspect ratio */
-    max-width: 100%; /* Prevent the image from exceeding its original width */
-    max-height: 100%; /* Prevent the image from exceeding its original height */
+img {
+    width: 80%; /* Make all images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Add margin top and bottom */
 }

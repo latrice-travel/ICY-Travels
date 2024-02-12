@@ -11,7 +11,6 @@ class TripForm(forms.ModelForm):
         widget=forms.RadioSelect,
         initial="future",
     )
-
     class Meta:
         model = Trip
         fields = [
