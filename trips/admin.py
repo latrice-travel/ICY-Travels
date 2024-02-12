@@ -15,5 +15,4 @@ class Trip(admin.ModelAdmin):
         "created_at",
         "past_trip",
         "future_trip",
-        
     )
