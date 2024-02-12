@@ -54,10 +54,8 @@ def edit_trip(request, id):
 @login_required
 def delete_trip(request, id):
     trip = get_object_or_404(Trip, id=id)
-    if request.method == 'POST':
+    if request.method == "POST":
         trip.delete()
         return redirect("trip_list")
-    context = {
-        'trip': trip
-    }
+    context = {"trip": trip}
     return render(request, "trips/delete.html", context)
